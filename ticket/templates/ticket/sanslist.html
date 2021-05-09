@@ -1,0 +1,64 @@
+{% extends "ticket/layout.html" %}
+
+
+{% block 1 %}
+
+    لیست سانس ها
+
+{% endblock 1 %}
+
+
+
+{% block two %}
+
+<div class="row">
+    {% for fullsans in object_list %}
+        <div class="col-md-4">
+            <div class="product-thumb">
+                <a href="#" style="text-decoration: none">
+
+                    <div class="imageBox" style="background-color: #ddd">
+
+                        <p class="btn-secondary" style="font-size: 30px ; color: #25cff2">{{ fullsans.film_sans }}</p>
+                        <hr>
+                        <p>{{ fullsans. }}</p>
+                        <p style="color: crimson">{{ fullsans.local_sans.name_location }}</p>
+                        <p style="color: #06357a ; font-size: 15px">{{ fullsans.local_sans.adress_location }}</p>
+
+                        <p></p>
+                        <p class="mdi mdi-timelapse time" style="font-family: unset ; font-size: 13px ; color: #b02a37">
+                            {{ fullsans.time_sans }}
+                        </p>
+                        <p class="mdi mdi-cash price" style="color: #d63384 ; font-size: 15px">
+                            {{ fullsans.price_sans }}
+                        </p>
+
+                        <button
+                                class="
+                                {% if fullsans.status_sans == fullsans.start %}
+                                btn btn-primary
+                                {% elif fullsans.status_sans == fullsans.end %}
+                                btn btn-danger
+                                {% elif fullsans.status_sans == fullsans.blit %}
+                                btn btn-dark
+                                {% elif fullsans.status_sans == fullsans.kansel %}
+                                btn btn-danger
+                                {% elif fullsans.status_sans == fullsans.endblit %}
+                                btn btn-danger
+                                {% endif %}
+                                ">
+                            {{ fullsans.get_status_sans_display }}
+                        </button>
+
+                    </div>
+
+
+
+                </a>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+
+{% endblock two %}

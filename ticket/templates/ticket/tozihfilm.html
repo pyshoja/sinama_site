@@ -1,0 +1,46 @@
+
+{% extends "ticket/layout.html" %}
+
+
+{% block 1 %}
+
+    به حساب کاربری خود وارد شوید
+
+{% endblock 1 %}
+
+
+
+{% block two %}
+
+    <div class="row">
+        <div class="container-fluid" style="float: right ; background-color: white ; width: 3in ; height: auto">
+            <img src="{{ object.image_film.url }}" style="width: 250px ; height: 300px">
+        </div>
+        <div class="container-fluid" style="width: 70% ; height: auto">
+
+            <b class="mdi mdi-film" style="font-family: 'Shabnam', Tahoma ; font-size: 30px ; color: #6a1a21"> {{ object.name_film }} </b>
+            <p>    </p>
+            <h1 class="mdi mdi-arrow-left-bold-circle" style="font-family: 'Shabnam', Tahoma ; font-size: 20px ; color: #ffc107"> {{ object.get_age_film_display }}</h1>
+            <p style="color: white">  .  </p>
+            <b style="font-family: 'Shabnam', Tahoma ; font-size: 19px"> کارگردان : {{ object.karghardan }}</b>
+            <p>   </p>
+            <h1 style="font-family: 'Shabnam', Tahoma ; font-size: 17px">  {{ object.film_time }} - {{ object.name_janer }} - محصول  {{ object.country_film }}</h1>
+            <h1 style="font-family: 'Shabnam', Tahoma ; font-size: 17px">  {{ object.time_film }}</h1>
+            <p style="color: white"> . </p>
+            <b style="font-family: 'Shabnam', Tahoma ; font-size: 19px"> نام بازیگران  </b>
+            <h1 style="font-family: 'Shabnam', Tahoma ; font-size: 18px"> {{ object.name_bazigaran }}</h1>
+            <p style="color: white"> . </p>
+            <b style="font-family: 'Shabnam', Tahoma ; font-size: 19px"> درباره فیلم  </b>
+            <h1 style="font-family: 'Shabnam', Tahoma ; font-size: 18px">  {{ object.tozihat }}</h1>
+            <p style="color: white">  .  </p>
+            <hr>
+            <div>
+                <button class="mdi mdi-gesture-tap" style="float: left ; background-color: #198754 ; font-size: 20px"><a href="{% url 'sans' %}" style="font-size: 18px ; text-decoration: none; color: #101214">سانس ها</a></button>
+                <button class="mdi mdi-bookmark" style="background-color: #0b7dda ; font-size: 18px">نشان کن</button>
+                <button class="mdi mdi-thumb-up" style="background-color: #198754 ; font-size: 18px"></button>
+                <button class="mdi mdi-thumb-down" style="background-color: #a52834 ; font-size: 18px"></button>
+            </div>
+        </div>
+    </div>
+
+{% endblock two %}

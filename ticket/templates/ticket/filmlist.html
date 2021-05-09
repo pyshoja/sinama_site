@@ -1,0 +1,28 @@
+
+{% extends "ticket/layout.html" %}        
+    
+
+{% block 1 %}
+
+     فیلم ها  
+
+{% endblock 1 %}
+
+
+
+{% block two %}
+<div class="row">
+    {% for fullfilm in object_list %}
+
+                        <div class="col-md-2">
+                <div class="border" style="text-align: center">
+                            <a href="/tozih/{{ fullfilm.namber_film }}"><img src="{{ fullfilm.image_film.url }}" class="img-responsive" style="width: 100% ; height: 200px"></a>
+                    <a href="/tozih/{{ fullfilm.namber_film }}" style="text-decoration: none ; color: black">{{ fullfilm }}</a>
+                </div>
+                <p>  </p>
+            </div>
+
+    {% endfor %}
+</div>
+
+{% endblock two %}

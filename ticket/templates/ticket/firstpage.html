@@ -1,0 +1,39 @@
+
+{% extends "ticket/layout.html" %}        
+{% load static %}
+
+{% block 1 %}
+
+    به سایت رزرو بلیط سینما خوش آمدید   
+
+{% endblock 1 %}
+
+
+
+{% block two %}
+
+    <div class="row">
+    <img src="{% static 'ticket/images/bio1.png' %}" style="width: 100%;height: 200px" alt="none">
+    <img src="{% static 'ticket/images/bio2.jpg' %}" style="width: 100%;height: 200px" alt="none">
+    <P>   </P>
+    {% if filmi %}
+        {% for fullfilm in filmi %}
+
+                <div class="col-md-2">
+                    <div class="border" style="text-align: center">
+                        <abbr title=" نوع فیلم : {{ fullfilm.name_janer }}
+ کارگردان : {{ fullfilm.karghardan }}
+ نام بازیگران : {{ fullfilm.name_bazigaran }}
+ سال تولید : {{ fullfilm.time_film }}">
+                        <a href="/tozih/{{ fullfilm.namber_film }}"><img src="{{ fullfilm.image_film.url }}" class="img-responsive" style="width: 100% ; height: 200px"></a>
+                        </abbr>
+                            <a href="/tozih/{{ fullfilm.namber_film }}" style="text-decoration: none ; color: black">{{ fullfilm }}</a>
+                    </div>
+                        <p>  </p>
+                </div>
+
+        {% endfor %}
+    {% endif %}
+    </div>
+{% endblock two %}
+

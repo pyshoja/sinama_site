@@ -1,0 +1,36 @@
+{% extends "ticket/layout.html" %}
+
+
+{% block 1 %}
+
+    به حساب کاربری خود وارد شوید
+
+{% endblock 1 %}
+
+
+
+{% block two %}
+
+    <form method="post">
+    {% csrf_token %}
+
+    <div class="row">
+    <div class="container-fluid" style="float: right ; background-color: #6c757d ; width: 7in ; height: 5in">
+        <b style="font-size: 30px">ایجاد حساب کاربری </b>
+        <p>  </p>
+
+        {{ form.as_p }}
+
+        <p>  </p>
+        <button type="submit" value="login" style="background-color: #198754">ایجاد حساب</button>
+    <p>  </p>
+
+
+
+        </div>
+    </form>
+    <p>   </p>
+    <p>    </p>
+
+
+{% endblock two %}

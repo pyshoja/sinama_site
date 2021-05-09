@@ -1,0 +1,281 @@
+p{
+    color: rgb(7, 7, 7);
+    font-size: 20px;
+}
+
+.box{
+    background-color: #04414d ;
+    padding-top: 20px;
+    
+    text-align: center;
+}
+
+.imageBox{
+    margin:5px;
+    background-color: rgba(255, 255, 255, 0.301);
+    text-align: center;
+    font-size: 15px;
+    border:1px dashed rgb(255, 255, 255);
+    padding:10px
+}
+
+.imageBox img{
+    width: 100%;
+    height: auto;
+}
+
+.btnul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.btnul li{
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+.product-thumb .image {
+	text-align: center;
+}
+.product-thumb .image a {
+	display: block;
+}
+
+
+.p1 {
+    font-family: 'Shabnam', Tahoma;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+/* برای سرتیتر سایت که حالت کشویی دارد ساخته شده است */
+
+body {
+    margin: 0;
+    font-family: 'Shabnam', Tahoma;
+    font-size: 15px;
+  }
+  
+.topnav {
+    overflow: hidden;
+    background-color: #04414d ;
+  }
+  
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+.topnav a.active {
+    background-color: ghostwhite;
+    color: white;
+  }
+
+.topnav h {
+    float: left;
+    font-family: 'Shabnam', Tahoma;
+    font-size: 30px;
+}
+
+
+
+/* از لفون برای خونه بندی لیست محصولات */
+.product-thumb {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+
+.product-grid .product-thumb .image {
+    float: none;
+}
+
+
+.product-thumb .caption {
+    padding: 0 20px;
+    min-height: 180px;
+}
+
+
+.product-thumb .button-group {
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    overflow: auto;
+}
+
+
+.product-thumb .button-group button {
+    width: 60%;
+    border: none;
+    display: inline-block;
+    float: right;
+    background-color: #eee;
+    color: #888;
+    line-height: 38px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.product-thumb .button-group button + button {
+    width: 20%;
+    border-right: 1px solid #ddd;
+}
+
+
+.fa-shopping-cart:before {
+    content: "\f07a";
+}
+
+.fa-heart:before {
+    content: "\f004";
+}
+
+.fa-exchange:before {
+    content: "\f0ec";
+}
+
+
+
+
+
+
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+
+
+
+
+
+.search {
+    font-family: Arial;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+form.example input[type=text] {
+    padding: 8px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: right;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+form.example button {
+    float: right;
+    width: 20%;
+    padding: 8px;
+    background: #14721c;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+form.example button:hover {
+    background: #0b7dda;
+  }
+  
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*###################*/
+
+
+body {
+  font-family: 'Shabnam', Tahoma;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: #f2f2f2;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #adb5bd;
+}
+
+
