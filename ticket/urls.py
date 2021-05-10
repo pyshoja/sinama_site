@@ -21,7 +21,3 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
     path('accounts/profile/', Profileview.as_view(), name='profile'),
 ]
-
-
-# from . import views
-#     path('first/janer/film/account/', views.Newuser , name='register'),

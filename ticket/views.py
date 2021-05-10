@@ -7,7 +7,7 @@ from .models import Location
 from .models import sans
 from .models import Profile
 
-# وارد سازی تمپلیت ها
+
 from django.views.generic import TemplateView, View
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
@@ -64,9 +64,6 @@ class aboutview(TemplateView):
         return context
 
 
-    # login_url = '/login/'
-    # redirect_field_name = 'redirect_to'
-
 
 
 from django.contrib.auth.forms import UserCreationForm
@@ -89,21 +86,3 @@ class Profileview(TemplateView):
         return context
 
 
-
-
-#
-# from django.contrib import messages
-#
-# def Newuser(request):
-#     if request.method == 'POST':
-#         first_name = request.POST['first_name']
-#         last_name = request.POST['last_name']
-#         phone_name = request.POST['phone_name']
-#         imail_name = request.POST['imail_name']
-#         adress_name = request.POST['adress_name']
-#         name(imail_name=imail_name , adress_name=adress_name , first_name=first_name , last_name=last_name , phone_name=phone_name ).save()
-#
-#         messages.success(request, 'سلام' + request.POST['imail_name'] + 'به سایت ما خوش آمدید')
-#         return render(request,'ticket/firstpage.html')
-#     else:
-#         return render(request, 'ticket/login.html')
