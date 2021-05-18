@@ -1,5 +1,5 @@
 from django.db import models
-
+from .extensions.utils import jalali_datetime
 
 
 # Create your models here.
@@ -28,7 +28,7 @@ class Film(models.Model):
     karghardan=models.CharField(max_length=50,null=True,verbose_name=' کارگردان')
     name_bazigaran = models.CharField(max_length=200, verbose_name='نام بازیگران')
     tozihat = models.CharField(max_length=1000, verbose_name='درباره فیلم')
-    time_film = models.DateField(null=True , verbose_name='سال تولید فیلم')
+    time_film = models.DateTimeField(null=True , verbose_name='زمان تولید فیلم')
     image_film = models.ImageField(upload_to='filmimages', verbose_name='عکس فیلم', null=True)
     film_time= models.CharField(max_length=100 , null=True , verbose_name='تایم فیلم')
     country_film = models.CharField(max_length=50 ,null=True , verbose_name='محصول کشور')
@@ -49,6 +49,11 @@ class Film(models.Model):
 
     def __str__(self):
         return self.name_film
+
+    def jalalidatetime(self):
+        return jalali_datetime(self.time_film)
+
+    jalalidatetime.short_description = 'زمان تولید فیلم'
 
 
 
@@ -94,6 +99,11 @@ class sans(models.Model):
 
     def __str__(self):
         return '{} {}'.format (self.film_sans,self.local_sans)
+
+    def jalalidatetime(self):
+        return jalali_datetime(self.time_sans)
+
+    jalalidatetime.short_description = 'زمان سانس'
 
 
 
