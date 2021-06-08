@@ -1,4 +1,4 @@
-{% extends "ticket/layout.html" %}
+{% extends "registration/base.html" %}
 
 
 {% block 1 %}
@@ -17,19 +17,19 @@
             <div class="product-thumb">
                 <a href="#" style="text-decoration: none">
 
-                    <div class="imageBox" style="background-color: #ddd">
+                    <div class="imageBox" style="text-align: center ; background-color: #ddd">
 
-                        <p class="btn-secondary" style="font-size: 30px ; color: #25cff2">{{ fullsans.film_sans }}</p>
+                        <p class="btn-secondary" style="text-align: center ; font-size: 30px ; color: #25cff2">{{ fullsans.film_sans }}</p>
                         <hr>
                         <p>{{ fullsans. }}</p>
-                        <p style="color: crimson">{{ fullsans.local_sans.name_location }}</p>
-                        <p style="color: #06357a ; font-size: 15px">{{ fullsans.local_sans.adress_location }}</p>
+                        <p style="text-align: center ; color: crimson">{{ fullsans.local_sans.name_location }}</p>
+                        <p style="text-align: center ; color: #06357a ; font-size: 15px">{{ fullsans.local_sans.adress_location }}</p>
 
                         <p></p>
-                        <p class="mdi mdi-timelapse time" style="font-family: unset ; font-size: 13px ; color: #b02a37">
+                        <p class="mdi mdi-timelapse time" style="text-align: center ; font-family: unset ; font-size: 13px ; color: #b02a37">
                             {{ fullsans.jalalidatetime }}
                         </p>
-                        <p class="mdi mdi-cash price" style="color: #d63384 ; font-size: 15px">
+                        <p class="mdi mdi-cash price" style="text-align: center ; color: #d63384 ; font-size: 15px">
                             {{ fullsans.price_sans }}
                         </p>
 

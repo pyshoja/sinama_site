@@ -39,9 +39,13 @@ INSTALLED_APPS = [
     'web',
     'ticket.apps.TicketConfig',
     'ticket.extensions',
+    'rest_api.apps.RestApiConfig',
+    'rest_framework',
+    'crispy_forms',
+
 ]
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,9 +129,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# with media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-
+# With logout user from site
 LOGOUT_REDIRECT_URL = "login"
+
+
+# with setting restframework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}

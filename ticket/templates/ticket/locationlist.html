@@ -1,5 +1,5 @@
 
-{% extends "ticket/layout.html" %}
+{% extends "registration/base.html" %}
 
 
 {% block 1 %}
@@ -11,25 +11,37 @@
 
 
 {% block two %}
-    <b style="font-size: 20px">لیست سینماهای ما</b>
-
-    {%  if local %}
-        {%  for fullocal in local %}
-
-            <table class="border" style="font-family: 'Shabnam', Tahoma ; font-size: 14px ; width: 100% ; height: 50%">
-
-                <tr>
-                    <td>{{ fullocal.name_location}}</td>
-                    <td style="text-align: center">{{ fullocal.adress_location}}</td>
-                    <td style="text-align: left">{{ fullocal.phone_location}}</td>
-                </tr>
-            <p>   </p>
-
-            </table>
 
 
-        {% endfor %}
-    {% endif %}
+
+            <div class="card">
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                    <tr>
+                      <th style="text-align: right">نام سینما</th>
+                      <th style="text-align: center">آدرس سینما</th>
+                      <th style="text-align: left">شماره تماس</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                  {%  if local %}
+                  {%  for fullocal in local %}
+                    <tr>
+                      <td style="text-align: right"><a href="#">{{ fullocal.name_location}}</a></td>
+                      <td style="text-align: center">{{ fullocal.adress_location}}</td>
+                      <td style="text-align: left"><span class="badge badge-success"></span>{{ fullocal.phone_location}}</td>
+                    </tr>
+                  {% endfor %}
+                  {% endif %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
 
 {% endblock two %}
 

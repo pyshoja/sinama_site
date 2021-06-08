@@ -77,12 +77,21 @@ class SignUpView(generic.CreateView):
     template_name = 'ticket/signup.html'
 
 
-class Profileview(TemplateView):
+# class Profileview(TemplateView):
+#     template_name = 'ticket/profile.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super(Profileview, self).get_context_data(**kwargs)
+#         context['pro'] = Profile.objects.all()
+#         return context
+
+
+from django.views.generic.edit import UpdateView
+class Profileview (UpdateView):
+    model = Profile
+    fields = ['first_name', 'last_name' , 'imail_name' , 'phone_name' , 'adress_name']
+    success_url = "/"
     template_name = 'ticket/profile.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(Profileview, self).get_context_data(**kwargs)
-        context['pro'] = Profile.objects.all()
-        return context
-
-
+    def get_object(self):
+        return self.request.user

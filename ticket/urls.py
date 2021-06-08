@@ -10,6 +10,8 @@ from ticket.views import aboutview
 from ticket.views import SignUpView
 from ticket.views import Profileview
 
+
+
 urlpatterns = [
 
     path('first/',firstpageview.as_view(), name='firstpage'),
